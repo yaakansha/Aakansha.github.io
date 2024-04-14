@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum and Product Calculator</title>
+</head>
+<body>
+  <h1>Sum and Product Calculator</h1>
+  <button type="button" onclick="calculate()">Calculate</button>
+
+  <div id="result">
+    <p>Sum: <span id="sumResult"></span></p>
+    <p>Product: <span id="productResult"></span></p>
+  </div>
+
+  <script>
+    function calculate() {
+      const integerArray = [2, 4, 6, 8];
+      
+      let sum = 0;
+      let product = 1;
+
+      for (let i = 0; i < integerArray.length; i++) {
+        sum += integerArray[i];
+        product *= integerArray[i];
+      }
+
+      document.getElementById("sumResult").textContent = sum;
+      document.getElementById("productResult").textContent = product;
+    }
+
+    // Automatically calculate the sum and product when the page loads
+    calculate();
+  </script>
+</body>
+</html>
